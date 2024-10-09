@@ -26,7 +26,7 @@ function Home() {
           // setResponse(res.data)
         })
     } else {
-      window.location.pathname = "/login"
+      window.location.pathname = "/banking-frontend/login"
     }
   }, [])
 
