@@ -18,7 +18,7 @@ function Login() {
                     if(res.status === 202){
                     const encNumber = await CryptoJS.AES.encrypt(res.data.acNumber.toString(),"1235").toString();
                     window.localStorage.setItem('accountToken',encNumber);
-                    navigate(`/`)
+                    navigate(`/banking-frontend/`)
                     }else{
                         setDisable(false)
                         alert("Something went wrong")

@@ -122,7 +122,7 @@ function Home() {
     if (window.confirm(message) === true) {
       window.localStorage.removeItem('accountToken')
       setDisable(false)
-      navigate('/login');
+      navigate('/banking-frontend/login');
     } else {
 
     }
@@ -143,7 +143,7 @@ function Home() {
               document.getElementById('overlay').style.display = 'none'
               alert("Account Deleted Successfully.\nThank you for Banking with us.")
               window.localStorage.removeItem('accountToken');
-              navigate("/login")
+              navigate("/banking-frontend/login")
             } else {
               alert("Something went wrong.\nPlease try again")
             }
