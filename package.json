@@ -1,4 +1,5 @@
 {
+  "homepage": "https://PramodPatil03/github.io/banking_frontend",
   "name": "banking_frontend",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
