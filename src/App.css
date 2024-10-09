@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+body {
+  width: 100%;
+  min-height: 100dvh;
+  max-height: 100dvh;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(116, 116, 115);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  position: relative;
+  min-width: 100vw;
+  height: 100vh;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container h1 {
+  font-size: 2.5em;
+  font-size: 800;
+}
+
+.container p {
+  font-size: 1.5em;
+}
+
+
+.btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 35px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/*! Form styling */
+
+.form-container {
+  width: 500px;
+  margin-top: 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: white;
+  background-color: rgb(80, 79, 79);
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+
+
+.form-container input {
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.form-container input:last-child {
+  width: 50%;
+  cursor: pointer;
+  padding-left: 0;
+  align-self: center;
+}
+
+.form-container input:last-child:hover {
+  color: white;
+  background-color: green;
+}
+
+/*! Account info */
+
+.info-holder {
+  width: 50%;
+  padding: 30px;
+  margin-top: 30px;
+  color: white;
+  background-color: rgb(44, 45, 45);
+  border-radius: 20px;
+}
+
+.info-holder tr {
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+
+
+.info-holder th,
+td {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.fs-22 {
+  font-size: 2em;
+}
+
+.button-holder {
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.button-holder input {
+  width: 100%;
+
+}
+
+/*! Other options */
+
+.other-options {
+  width: 50%;
+  margin-top: 30px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.other-options button {
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  width: 45%;
+  height: 40px;
+  cursor: pointer;
+}
+
+
+/*! Transfer dialog */
+
+.dialog {
+  display: none;
+  position: absolute;
+  z-index: 999;
+}
+
+.dialog form input:last-child {
+  width: 100%;
+}
+
+.dialog form input[type="submit"]:hover {
+  background-color: green;
+}
+
+.dialog form input[type="reset"]:hover {
+  background-color: red;
+}
+
+#delete-account-dialog form input[type="submit"]:hover {
+  background-color: red;
+}
+
+#delete-account-dialog form input[type="reset"]:hover {
+  background-color: green;
+}
+
+#overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.289);
+  backdrop-filter: blur(5px);
 }
