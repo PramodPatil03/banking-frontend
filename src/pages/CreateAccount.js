@@ -23,7 +23,7 @@ function CreateAccount() {
                         const accNumber = res.data.acNumber;
                         const encNumber = CryptoJS.AES.encrypt(accNumber.toString(), "1235").toString();
                         window.localStorage.setItem('accountToken', encNumber);
-                        navigate(`/banking-frontend/`)
+                        navigate(`./`)
                     } 
                     else {
                         setDisable(false)

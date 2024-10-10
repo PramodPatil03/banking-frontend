@@ -26,7 +26,7 @@ function Home() {
           // setResponse(res.data)
         })
     } else {
-      window.location.pathname = "/banking-frontend/login"
+      window.location.pathname = "./login"
     }
   }, [])
 
@@ -122,7 +122,7 @@ function Home() {
     if (window.confirm(message) === true) {
       window.localStorage.removeItem('accountToken')
       setDisable(false)
-      navigate('/banking-frontend/login');
+      navigate('./login');
     } else {
 
     }
@@ -143,7 +143,7 @@ function Home() {
               document.getElementById('overlay').style.display = 'none'
               alert("Account Deleted Successfully.\nThank you for Banking with us.")
               window.localStorage.removeItem('accountToken');
-              navigate("/banking-frontend/login")
+              navigate("./login")
             } else {
               alert("Something went wrong.\nPlease try again")
             }
