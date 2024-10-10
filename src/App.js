@@ -6,13 +6,13 @@ import CreateAccount from './pages/CreateAccount'
 import Error404 from './pages/Error404'
 
 function App() {
-  
+
   return (
     <HashRouter>
       <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/login' element={<Login />} />
-        <Route exact path='/register' element={<CreateAccount />} />
+          <Route exact path='/banking-frontend' element={<Home />} />
+        <Route exact path='/banking-frontend/login' element={<Login />} />
+        <Route exact path='/banking-frontend/register' element={<CreateAccount />} />
         <Route exact path='*' element={<Error404 />} />
       </Routes>
     </HashRouter>
